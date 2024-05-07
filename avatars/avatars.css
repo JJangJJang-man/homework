@@ -82,7 +82,8 @@ td,th{
 
 /* 헤더 영역 */
 .header {
-  height: 36px;
+  height: auto;
+  display: flow-root;
 }
 
 .subject {
@@ -129,19 +130,7 @@ td,th{
   bottom: 0;
 }
 
-.status2 {
-  background-color: #4CFE88;
-}
-
-.status4 {
-  background-color: #4CFE88;
-}
-
-.status5 {
-  background-color: #4CFE88;
-}
-
-.status6 {
+.is-online {
   background-color: #4CFE88;
 }
 
