@@ -19,10 +19,16 @@
   <body>
     <h1 class="sr-only">Naver Login form</h1>
 
+    <!-- 로고 -->
+    <header class="header" role="banner">
+      <div class="logo">
+        <a href="https://www.naver.com"
+          ><img src="./logo.svg" alt="네이버 로고"
+        /></a>
+      </div>
+    </header>
+    <!-- 로그인 폼 -->
     <section class="login">
-      <!-- 로고 -->
-      <h2 class="login-title"><img src="./logo.svg" alt="네이버 로고" /></h2>
-      <!-- 로그인 폼 -->
       <form action="//" class="login-form">
         <fieldset>
           <legend class="sr-only">로그인 폼</legend>
@@ -60,7 +66,13 @@
           <label for="keep-logininfo">로그인 상태 유지</label>
         </li>
         <li class="ip-check">
-          <a href="//" target="_blank" id="ipguide" title="IP보안">IP보안</a>
+          <a
+            href="./ip_security.html"
+            target="_blank"
+            id="ipguide"
+            title="IP보안"
+            >IP 보안</a
+          >
           <input type="checkbox" id="ip-switch" name="ip-switch" />
           <label for="ip-switch"></label>
         </li>
