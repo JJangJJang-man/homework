@@ -2,11 +2,6 @@
 @import url(./base.css);
 @import url(./sr-only.css);
 
-
-.login {
-  padding: 0 1.25rem;
-}
-
 /* svg형식을 지원하는 않는 웹브라우저는 png형식 로고*/
 
 img[src="./logo.png"] {
@@ -34,13 +29,17 @@ img[src="./logo.png"] {
 .logo {
   width: 230px;
   margin: 100px auto 50px;
+
 }
 
 /* 로그인 폼 */
 
+.login {
+  padding: 0 1.25rem;
+}
+
 .login-form {
   width: 100%;
-  margin-top: 50px;
 
   fieldset {
     width: 100%;
@@ -59,7 +58,6 @@ img[src="./logo.png"] {
   font-size: 0.875rem;
   display: flex;
   flex-flow: row nowrap;
-  gap: 0;
 
   input {
     font-size: 0.875rem;
@@ -132,7 +130,7 @@ img[src="./logo.png"] {
 @media (min-width: 768px) {
 
   .login {
-    width: 500px;
+    width: 31.25rem;
     margin: 0 auto;
   }
 

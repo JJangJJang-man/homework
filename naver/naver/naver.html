@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="./naver.css" />
   </head>
   <body>
-    <h1 class="sr-only">Naver Login form</h1>
-
     <!-- 로고 -->
     <header class="header" role="banner">
+      <h1 class="sr-only">Naver Login form</h1>
       <div class="logo">
         <a href="https://www.naver.com" tabindex="-1">
           <img src="./logo.svg" alt="네이버 로고" />
@@ -29,22 +28,22 @@
           <legend class="sr-only">로그인 폼</legend>
           <div class="id-pw-wrap">
             <div role="group" class="form-input user-id">
-              <lable for="user-id"></lable>
+              <label for="userId"></label>
               <input
                 type="text"
-                id="user-id"
-                name="user-id"
+                id="userId"
+                name="userId"
                 required
                 placeholder="아이디(이메일)"
                 title="아이디"
               />
             </div>
             <div role="group" class="form-input user-password">
-              <lable for="user-pw"></lable>
+              <label for="userPw"></label>
               <input
                 type="password"
-                id="user-pw"
-                name="user-pw"
+                id="userPw"
+                name="userPw"
                 required
                 placeholder="비밀번호"
                 title="비밀번호"
@@ -68,30 +67,13 @@
             target="_blank"
             id="ipguide"
             title="IP보안"
-            >IP 보안</a
           >
+            IP 보안
+          </a>
           <input type="checkbox" id="ip-switch" name="ip-switch" />
           <label for="ip-switch"></label>
         </li>
       </ul>
-
-      <!-- <div role="gruop" class="check-sub">
-        <div class="keep-check">
-          <input type="checkbox" id="keep-logininfo" name="keep-login-info" />
-          <label for="keep-logininfo">로그인 상태 유지</label>
-        </div>
-        <div class="ip-check">
-          <a
-            href="./ip_security.html"
-            target="_blank"
-            id="ipguide"
-            title="IP보안"
-            >IP 보안</a
-          >
-          <input type="checkbox" id="ip-switch" name="ip-switch" />
-          <label for="ip-switch"></label>
-        </div>
-      </div> -->
     </section>
   </body>
 </html>
