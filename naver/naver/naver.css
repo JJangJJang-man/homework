@@ -1,8 +1,32 @@
 @import url(./mini-reset.css);
 @import url(./base.css);
+@import url(./sr-only.css);
+
 
 .login {
   padding: 0 1.25rem;
+}
+
+/* svg형식을 지원하는 않는 웹브라우저는 png형식 로고*/
+
+img[src="./logo.png"] {
+  display: none;
+}
+.logo img {
+  display: none;
+}
+
+@supports (image-rendering: -moz-crisp-edges) {
+  img[src="./logo.svg"] {
+    display: inline;
+  }
+}
+
+@supports not (image-rendering: -moz-crisp-edges) {
+
+  img[src="./logo.png"] {
+    display: inline;
+  }
 }
 
 /* 로고 */
@@ -10,10 +34,6 @@
 .logo {
   width: 230px;
   margin: 100px auto 50px;
-
-  a:focus-visible {
-    outline: 2px solid #24388d
-  }
 }
 
 /* 로그인 폼 */
@@ -55,8 +75,6 @@
   }
 }
 
-
-
 /* 로그인 버튼 */
 
 .login-button {
@@ -67,14 +85,7 @@
   margin-top: 20px;
   border: 0;
   width: 100%;
-
-  &:focus {
-    outline: 1px solid #e9f0fd;
-  } 
-  
 }
-
-
 
 /* 서브 메뉴 */
 
@@ -88,16 +99,22 @@
   }
 
   .keep-check {
+
     input {
     position: absolute;
     appearance: none;
-    width: 24px;
-    height: 24px;
+    width: 1.25rem;
+    height: 18px;
+    margin: 0;
+
+      &:focus-visible {
+        outline: 2px solid #24388d;
+      }
     }
 
     label {
-      background: url(./icons/unchecked.svg) no-repeat 0 0 /contain;
-      padding-left: 1.5625rem;
+      background: url(./icons/unchecked.svg) no-repeat 0 0 / contain;
+      padding-left: 1.8125rem;
     }
     
     input:checked + label {
@@ -110,6 +127,8 @@
   }
 }
 
+/* 768px 이상 화면에 반응 */
+
 @media (min-width: 768px) {
 
   .login {
@@ -117,6 +136,7 @@
     margin: 0 auto;
   }
 
+  /* 서브 메뉴 */
   .check-sub {
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -124,30 +144,42 @@
     .ip-check {
       display:list-item;
 
+      a {
+        &:focus-visible {
+          outline: 1px solid #24388d;
+        }
+      }
+
       input {
         position: absolute;
         appearance: none;
-        width: 24px;
-        height: 24px;
+        width: 1.875rem;
+        height: 20px;
+        margin: 0;
+
+        &:focus-visible {
+          outline: 1px solid #24388d;
         }
-    
-        label:after {
-          content: "ON";
-          padding-left: 5px;
-          font-size: 1rem;
-          color: #181818;
+      }
+
+      label:after {
+        content: "OFF";
+        font-size: 1rem;
+        color: #181818;
+
+        &:focus-visible {
+          outline: 1px solid #24388d;
         }
-        
-        input:checked + label:after {
-          content: "OFF";
-          padding-left: 5px;
-          font-size: 1rem;
-          color: #181818;
-        }
+      }
+      
+      input:checked {
+        width: 1.5rem;
+      }
+      input:checked + label:after {
+        content: "ON";
+        font-size: 1rem;
+        color: #03cf5d;
+      }
     }
   }
 }
-
-/* 서포트 데스크탑 환경 */
-
-

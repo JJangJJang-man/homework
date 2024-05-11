@@ -8,12 +8,6 @@
       href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-    />
     <link rel="stylesheet" href="./naver.css" />
   </head>
   <body>
@@ -22,9 +16,10 @@
     <!-- 로고 -->
     <header class="header" role="banner">
       <div class="logo">
-        <a href="https://www.naver.com"
-          ><img src="./logo.svg" alt="네이버 로고"
-        /></a>
+        <a href="https://www.naver.com" tabindex="-1">
+          <img src="./logo.svg" alt="네이버 로고" />
+          <img src="./logo.png" alt="네이버 로고 png format" />
+        </a>
       </div>
     </header>
     <!-- 로그인 폼 -->
@@ -56,7 +51,9 @@
               />
             </div>
           </div>
-          <button type="submit" class="login-button">로그인</button>
+          <button type="submit" class="login-button" tabindex="-1">
+            로그인
+          </button>
         </fieldset>
       </form>
       <!-- 로그인 부가 메뉴 -->
@@ -77,6 +74,24 @@
           <label for="ip-switch"></label>
         </li>
       </ul>
+
+      <!-- <div role="gruop" class="check-sub">
+        <div class="keep-check">
+          <input type="checkbox" id="keep-logininfo" name="keep-login-info" />
+          <label for="keep-logininfo">로그인 상태 유지</label>
+        </div>
+        <div class="ip-check">
+          <a
+            href="./ip_security.html"
+            target="_blank"
+            id="ipguide"
+            title="IP보안"
+            >IP 보안</a
+          >
+          <input type="checkbox" id="ip-switch" name="ip-switch" />
+          <label for="ip-switch"></label>
+        </div>
+      </div> -->
     </section>
   </body>
 </html>
