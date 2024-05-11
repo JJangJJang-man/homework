@@ -1,0 +1,19 @@
+/* 기본 스타일 */
+:root{
+  --base-font-famaily: "SUIT Variable", sans-serif;
+  /* <link
+  href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css"
+  rel="stylesheet"
+  /> */
+}
+
+body *, body *::before, body *::after {
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #181818;
+}
+
+body{
+  font-family: var(--base-font-famaily);
+  line-height: 1.15;
+}
