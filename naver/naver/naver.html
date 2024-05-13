@@ -13,13 +13,14 @@
   <body>
     <!-- 로고 -->
     <header class="header" role="banner">
-      <h1 class="sr-only">Naver Login form</h1>
-      <div class="logo">
-        <a href="https://www.naver.com" tabindex="-1">
-          <img src="./logo.svg" alt="네이버 로고" />
-          <img src="./logo.png" alt="네이버 로고 png format" />
-        </a>
-      </div>
+      <h1>
+        <div class="logo">
+          <a href="https://www.naver.com">
+            <img src="./logo.svg" alt="네이버 로고" />
+            <img src="./logo.png" alt="네이버 로고 png format" />
+          </a>
+        </div>
+      </h1>
     </header>
     <!-- 로그인 폼 -->
     <section class="login">
@@ -30,7 +31,7 @@
             <div role="group" class="form-input user-id">
               <label for="userId"></label>
               <input
-                type="text"
+                type="email"
                 id="userId"
                 name="userId"
                 required
@@ -50,30 +51,31 @@
               />
             </div>
           </div>
-          <button type="submit" class="login-button" tabindex="-1">
-            로그인
-          </button>
+          <button type="submit" class="login-button">로그인</button>
         </fieldset>
+        <!-- 로그인 부가 메뉴 -->
+        <ul class="check-sub">
+          <li class="keep-check">
+            <input type="checkbox" id="keep-logininfo" name="keep-login-info" />
+            <label for="keep-logininfo">로그인 상태 유지</label>
+          </li>
+          <li class="ip-check">
+            <a
+              href="./ip_security.html"
+              target="_blank"
+              id="ipguide"
+              title="IP보안"
+              rel="noopener noreferrer"
+            >
+              IP 보안
+            </a>
+            <input type="checkbox" id="ip-switch" name="ip-switch" />
+            <label for="ip-switch"
+              ><span class="sr-only">IP 보안 ON/OFF 스위치</span></label
+            >
+          </li>
+        </ul>
       </form>
-      <!-- 로그인 부가 메뉴 -->
-      <ul class="check-sub">
-        <li class="keep-check">
-          <input type="checkbox" id="keep-logininfo" name="keep-login-info" />
-          <label for="keep-logininfo">로그인 상태 유지</label>
-        </li>
-        <li class="ip-check">
-          <a
-            href="./ip_security.html"
-            target="_blank"
-            id="ipguide"
-            title="IP보안"
-          >
-            IP 보안
-          </a>
-          <input type="checkbox" id="ip-switch" name="ip-switch" />
-          <label for="ip-switch"></label>
-        </li>
-      </ul>
     </section>
   </body>
 </html>

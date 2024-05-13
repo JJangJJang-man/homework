@@ -7,7 +7,8 @@
 img[src="./logo.png"] {
   display: none;
 }
-.logo img {
+
+img[src="./logo.svg"] {
   display: none;
 }
 
@@ -18,11 +19,20 @@ img[src="./logo.png"] {
 }
 
 @supports not (image-rendering: -moz-crisp-edges) {
-
+  
   img[src="./logo.png"] {
     display: inline;
   }
 }
+
+body {
+  --main-color: #03cf5d;
+  --sub-color: #24388d;
+  --black: #181818;
+  --white: #fff;
+  --gray: #dadada;
+}
+
 
 /* 로고 */
 
@@ -63,12 +73,12 @@ img[src="./logo.png"] {
     font-size: 0.875rem;
     height:45px;
     width: 100%;
-    border: 1px solid #dadada;
-    background-color: #fff;
+    border: 1px solid var(--gray);
+    background-color: var(--white);
     padding: 0 1rem;
     
     &:focus {
-      outline: 1px solid #03cf5d;
+      outline: 1px solid var(--main-color);
     } 
   }
 }
@@ -78,8 +88,8 @@ img[src="./logo.png"] {
 .login-button {
   font-size: 1rem;
   height: 45px;
-  color: #fff;
-  background-color: #03cf5d;
+  color: var(--white);
+  background-color: var(--main-color);
   margin-top: 20px;
   border: 0;
   width: 100%;
@@ -106,7 +116,7 @@ img[src="./logo.png"] {
     margin: 0;
 
       &:focus-visible {
-        outline: 2px solid #24388d;
+        outline: 1px solid var(--sub-color);
       }
     }
 
@@ -144,7 +154,7 @@ img[src="./logo.png"] {
 
       a {
         &:focus-visible {
-          outline: 1px solid #24388d;
+          outline: 1px solid var(--sub-color);
         }
       }
 
@@ -156,17 +166,17 @@ img[src="./logo.png"] {
         margin: 0;
 
         &:focus-visible {
-          outline: 1px solid #24388d;
+          outline: 1px solid var(--sub-color);
         }
       }
 
       label:after {
         content: "OFF";
         font-size: 1rem;
-        color: #181818;
+        color: var(--black);
 
         &:focus-visible {
-          outline: 1px solid #24388d;
+          outline: 1px solid var(--sub-color);
         }
       }
       
@@ -176,7 +186,7 @@ img[src="./logo.png"] {
       input:checked + label:after {
         content: "ON";
         font-size: 1rem;
-        color: #03cf5d;
+        color: var(--main-color);
       }
     }
   }
