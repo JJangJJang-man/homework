@@ -221,16 +221,6 @@ h1 {
       url(../products/iphone15_2x.jpeg) 2x
     );
   }
-
-  @media (min-width: 1024px) {
-
-    .item-image {
-      background-image: image-set(
-        url(../products/iphone15.jpeg) 1x,
-        url(../products/iphone15_2x.jpeg) 2x
-      );
-    }
-  }
 }
 
 /* 애플워치 이미지*/
@@ -241,16 +231,6 @@ h1 {
       url(../products/apple_watch.jpeg) 1x,
       url(../products/apple_watch_2x.jpeg) 2x
     );
-  }
-
-  @media (min-width: 1024px) {
-
-    .item-image {
-      background-image: image-set(
-        url(../products/apple_watch.jpeg) 1x,
-        url(../products/apple_watch_2x.jpeg) 2x
-      );
-    }
   }
 }
 
@@ -263,16 +243,6 @@ h1 {
       url(../products/macbook_air_2x.jpeg) 2x
     );
   }
-
-  @media (min-width: 1024px) {
-
-    .item-image {
-      background-image: image-set(
-        url(../products/macbook_air.jpeg) 1x,
-        url(../products/macbook_air_2x.jpeg) 2x
-      );
-    }
-  }
 }
 
 /* 에어팟 프로 이미지*/
@@ -283,15 +253,5 @@ h1 {
       url(../products/airpods_pro.jpeg) 1x,
       url(../products/airpods_pro_2x.jpeg) 2x
     );
-  }
-
-  @media (min-width: 1024px) {
-
-    .item-image {
-      background-image: image-set(
-        url(../products/airpods_pro.jpeg) 1x,
-        url(../products/airpods_pro_2x.jpeg) 2x
-      );
-    }
   }
 }
